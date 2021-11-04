@@ -1,0 +1,314 @@
+html, body{
+    background-color: #1b1b1b;
+    min-height: 100vh;
+    margin:0
+}
+
+a, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #9E9E9E;
+}
+
+@font-face {
+    font-family: 'PFD';
+    src: url('./Fonts/PlayfairDisplay/PlayfairDisplay-VariableFont_wght.ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OS';
+    src: url('./Fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OSL';
+    src: url('./Fonts/Open_Sans/OpenSans-Light.ttf');
+}
+
+.slider{
+    background-image: url("slider.jpg");
+    height:100%;
+    width: 100%;
+}
+
+.sliderBox{
+    position: relative;
+    text-align: center;
+}
+
+.box{
+    background: #212121;
+    background-color: #212121;
+    border:1px solid #212121;
+}
+
+
+.boxWelcome{
+    margin-top: 10%;
+    text-align: center;
+    height: 50%;
+    justify-content: center;
+    padding-top: 10%;
+}
+
+/* Que sur firefox : 
+    background-image: -moz-element(#textTransparent);
+    background-repeat: no-repeat;
+    Pour texte transparent en fond
+*/
+
+.textBox{
+    position: relative;
+    text-align: left;
+    border: 1px solid #8C6A46;
+    margin: 1%;
+    height: 40vh;
+    padding: 50px;
+    padding-bottom: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 160%;
+    /* overflow: scroll; */
+}
+
+.textBox::before {
+    position: absolute;
+    border: 1px solid #8C6A46;
+    content: '';
+    width: 0%;
+    height: 4vh;
+    left: 50%;
+    top: 100%;
+}
+
+.textBox::after {
+    position: absolute;
+    border: 1px solid #8C6A46;
+    content: '';
+    width: 0%;
+    height: 4vh;
+    left: 50%;
+    top: -4.4vh;
+}
+
+.LeftBox{
+    position: relative;
+    display: inline;
+    float: left;
+}
+
+#NewsBox{
+    position: relative;
+    float: middle;
+    display: inline;
+    width: 50%;
+    height: 35%;
+    bottom: 10%;
+    padding-left: 34.4%;
+    text-align: center;
+}
+
+.RightBox{
+    position: relative;
+    float: right;
+    display: inline;
+    color: #FFFFFF;
+}
+
+.lineTitle{
+    color: #8C6A46;
+    width: 10%;
+    text-align: left;
+    margin-left: 0;
+}
+
+
+
+#logoSlider{
+    position: absolute;
+    bottom: 45%;
+    left: 40%;
+    right: 40%;
+       width: 21%;
+}
+
+#news{
+    position: relative;
+    border-radius: 50%;
+    border: 1px solid #8C6A46;
+    width: 10vh;
+    height: 10vh;
+    font-family: OS;
+    font-weight: 600;
+    font-size: 13px;
+    color: #FFFFFF;
+    letter-spacing: 2.6px;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+#news::before{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 4vh;
+    border: 1px solid #8C6A46;
+    top: -4.4vh;
+    left: 5vh;
+}
+
+#news::after{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 4vh;
+    border: 1px solid #8C6A46;
+    top: 10vh;
+    left: 5vh;
+}
+
+#date{
+    color:#8C6A46;
+    font-family: 'OpenSans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2.2px;
+}
+
+#title{
+    font-family: PFD;
+    color: #FFFFFF;
+    font-size: 26px;
+}
+
+#text{
+    font-family: OS;
+    font-weight: 300;
+    font-size: 16px;
+    color: #9E9E9E;
+    letter-spacing: 0;
+}
+
+#titreWelcome{
+    font-family: OS;
+    font-size: 24px;
+    color: #8C6A46;
+    text-align: center;
+}
+
+#textWelcome{
+    font-family: OSL;
+    color: #FFFFFF;
+    font-size: 16px;
+    text-align: center;
+    height: 100;
+}
+
+#textTransparent{
+    position: absolute;
+    user-select: none;
+    color: #AF9881;
+    top: -210%;
+    left: -50%;
+    font-family: PFD;
+    font-size: 125px;
+    letter-spacing: 0;
+    opacity: 0.1;
+    line-height: 100%;
+}
+
+#WelcomeBox{
+    position: relative;
+    text-align: center;
+}
+
+#footerLine{
+    width: 95%;
+    color: #8C6A46;
+    margin-top: 40%;
+}
+
+#footerText{
+    font-family: OS;
+    font-size: 11px;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    padding-left: 4%;
+}
+
+@media only screen and (max-width: 375px) {
+
+    .textBox{
+        padding-bottom: 200%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    #logoSlider{
+        top: 125px;
+        left: 100px;
+        width: 50%;
+    }
+}
+
+@media (min-width: 700px) {
+
+    #textTransparent{
+        top: -350%;
+        padding-left: 25%;
+        bottom: 0%;
+        left: 0%;
+    }
+}
+
+@media (min-width: 1000px)
+{
+    .textBox{
+        display: block;
+        flex-wrap: nowrap;
+        padding-bottom: 5%;
+    }
+
+    .LeftBox{
+        width: 25%;
+        height: 35%;
+    }
+
+    #NewsBox{
+        bottom: -35%;
+        padding-left: 22.2%;
+    }
+
+    .RightBox{
+        width: 25%;
+        height: 35%;
+    }
+
+    #textTransparent{
+        top: -350%;
+        padding-left: 25%;
+        bottom: 0%;
+        left: 0%;
+    }
+
+    #footerText{
+        padding-left: 3%;
+    }
+}
+
+@media (min-width: 1920px) {
+
+    #textTransparent{
+        top: -350%;
+        padding-left: 29.5%;
+        bottom: 0%;
+        left: 0%;
+    }
+}
